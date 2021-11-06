@@ -1,0 +1,42 @@
+.mainPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e6e6ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+  }
+}
+
+.container {
+  max-width: 1188px;
+  margin: 0 auto;
+  padding: 0 39px;
+}
+
+.housingStockList {
+  display: grid;
+  width: 1110px;
+  max-height: 1000px;
+  //flex-wrap: wrap;
+  //grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  //grid-gap: 1rem;
+  //overflow-y: scroll;
+  margin-top: 20px;
+}
+
+
+
+
+

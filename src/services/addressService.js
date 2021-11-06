@@ -1,6 +1,6 @@
 import instance from "../api";
 
-export default class housingStockService {
+export default class addressService {
   static async getStreetsList() {
     return instance.get('/Request/streets')
   }

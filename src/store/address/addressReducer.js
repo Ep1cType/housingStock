@@ -1,8 +1,7 @@
-import {SET_FLATS_LIST, SET_HOUSES_LIST, SET_HOUSING_STOCK_LIST, SET_STREETS_LIST} from "./housingStockTypes";
+import {SET_FLATS_LIST, SET_HOUSES_LIST, SET_STREETS_LIST} from "./addressTypes";
 
 
 let initialState = {
-  housingStockList: [],
   streetsList: [],
   housesList: [],
   flatsList: [],
@@ -10,14 +9,8 @@ let initialState = {
   error: "",
 };
 
-const housingStockReducer = (state = initialState, action) => {
+const addressReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_HOUSING_STOCK_LIST: {
-      return {
-        ...state,
-        housingStockList: action.payload,
-      };
-    }
     case SET_STREETS_LIST: {
       return {
         ...state,
@@ -39,6 +32,6 @@ const housingStockReducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
-export default housingStockReducer;
+export default addressReducer;
