@@ -56,7 +56,6 @@ const housingStockReducer = (state = initialState, action) => {
       }
     }
     case EDIT_CLIENT: {
-      debugger;
       return {
         ...state,
         housingStock: state.housingStock.map((el) => (el.addressId === action.payload.addressId ? {
@@ -72,7 +71,6 @@ const housingStockReducer = (state = initialState, action) => {
       };
     }
     case SET_PER_PAGE: {
-      debugger;
       return {
         ...state,
         perPage: action.payload

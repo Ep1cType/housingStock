@@ -9,9 +9,7 @@ const {Meta} = Card;
 
 const UserCard = ({houseInfo, openModal, openEditMode, warning}) => {
 
-
   const {addressId, streetId, houseId, streetName, building, corpus, flat, clients} = houseInfo;
-
 
   return (
     <>

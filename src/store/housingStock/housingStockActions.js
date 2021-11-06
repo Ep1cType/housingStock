@@ -18,12 +18,9 @@ export const housingStockActions = {
   setClientsList: (payload) => ({type: SET_CLIENTS_LIST, payload}),
   setIsLoading: (payload) => ({type: SET_IS_LOADING, payload}),
   fetchHousesStock: (queryName, id) => async (dispatch) => {
-    debugger;
     try {
       const response = await housingStockService.getHousingStock(queryName, id);
       console.log(response.data);
-      // const mockHousingStock = response.data.filter((house) => house.clients.length > 0)
-      // console.log(mockHousingStock);
       dispatch(housingStockActions.setHousesStock(response.data))
       dispatch(housingStockActions.setTotalCount(response.data.length));
     } catch (e) {
@@ -33,12 +30,10 @@ export const housingStockActions = {
     }
   },
   fetchClientsList: (addressId) => async (dispatch) => {
-    debugger;
     try {
       dispatch(housingStockActions.setIsLoading(true))
       const response = await housingStockService.getClientsList(addressId);
       console.log(response.data);
-      // dispatch(housingStockActions.setClientsList(response.data))
     } catch (e) {
 
     } finally {
@@ -46,7 +41,6 @@ export const housingStockActions = {
     }
   },
   postClient: (client, addressId) => async (dispatch) => {
-    debugger;
     try {
       const response = await housingStockService.postClient(client)
       console.log("Респонс поста клиента", response)
@@ -61,7 +55,6 @@ export const housingStockActions = {
     }
   },
   bindClient: (addressId, clientId, client) => async (dispatch) => {
-    debugger;
     try {
       const response = await housingStockService.bindClient(addressId, clientId);
       console.log("Респонс бинда клиента", response);
@@ -74,7 +67,6 @@ export const housingStockActions = {
     }
   },
   deleteClient: (addressId, clientId) => async (dispatch) => {
-    debugger;
     try {
       const response = await housingStockService.deleteBindClient(clientId);
       console.log('Удаление', response);
@@ -88,7 +80,6 @@ export const housingStockActions = {
     }
   },
   editClient: (newClient, addressId) => async (dispatch) => {
-    debugger;
     try {
       const response = await housingStockService.editClient(newClient);
       const {} = response.data

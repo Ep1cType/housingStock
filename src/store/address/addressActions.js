@@ -8,7 +8,6 @@ export const addressActions = {
   setIsLoading: (payload) => ({type: SET_IS_LOADING, payload}),
   setError: (payload) => ({type: SET_ERROR, payload}),
   fetchStreets: () => async (dispatch) => {
-    debugger;
     try {
       dispatch(addressActions.setIsLoading(true))
       const response = await addressService.getStreetsList();
@@ -21,7 +20,6 @@ export const addressActions = {
     }
   },
   fetchHouses: (streetId) => async (dispatch) => {
-    debugger;
     try {
       dispatch(addressActions.setIsLoading(true));
       const response = await addressService.getHousesList(streetId);
