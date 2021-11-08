@@ -21,24 +21,23 @@ export const addressActions = {
   },
   fetchHouses: (streetId) => async (dispatch) => {
     try {
-      dispatch(addressActions.setIsLoading(true));
       const response = await addressService.getHousesList(streetId);
       dispatch(addressActions.setHousesList(response.data));
     } catch (e) {
 
     } finally {
-      dispatch(addressActions.setIsLoading(false))
+
     }
   },
   fetchFlats: (houseId) => async (dispatch) => {
     try {
-      dispatch(addressActions.setIsLoading(true));
+
       const response = await addressService.getFlatsList(houseId);
       dispatch(addressActions.setFlatsList(response.data))
     } catch (e) {
 
     } finally {
-      dispatch(addressActions.setIsLoading(false))
+
     }
   }
 };

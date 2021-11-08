@@ -1,19 +1,19 @@
-import React, {useState} from "react";
+import React from "react";
 
-import s from "./UserCard.module.scss";
+import s from "./ClientCard.module.scss";
 
 import {Card} from "antd";
 import {DeleteOutlined, EditOutlined, UserAddOutlined} from "@ant-design/icons";
 
 const {Meta} = Card;
 
-const UserCard = ({houseInfo, openModal, openEditMode, warning}) => {
+const ClientCard = ({houseInfo, openModal, openEditMode, warning}) => {
 
   const {addressId, streetId, houseId, streetName, building, corpus, flat, clients} = houseInfo;
 
   return (
     <>
-      <li className={s.userCard}>
+      <li className={s.clientCard}>
         <div className={s.header}>
           <div className={s.address__name}>
             <h1>{streetName} {building}{corpus ? <span>к{corpus}</span> : null} {flat ?
@@ -25,10 +25,11 @@ const UserCard = ({houseInfo, openModal, openEditMode, warning}) => {
             </button>
           </div>
         </div>
-        <div className={s.userCard__item}>
-          {clients ? clients.map((user) => (
+        <div className={s.clientCard__item}>
+          {clients.length > 0 ? clients.map((user) => (
             <Card
               key={user.id}
+              size={"small"}
               actions={[
                 <EditOutlined onClick={() => openEditMode(user, addressId)} key="edit"/>,
                 <DeleteOutlined onClick={() => warning(addressId, user.bindId)} key="delete"/>
@@ -47,4 +48,4 @@ const UserCard = ({houseInfo, openModal, openEditMode, warning}) => {
   );
 };
 
-export default UserCard;
+export default ClientCard;

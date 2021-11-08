@@ -49,7 +49,7 @@ export const housingStockActions = {
       dispatch(housingStockActions.bindClient(addressId, id, client))
     } catch (e) {
       console.log("Ошибочка",e);
-      console.log("сообщение ошибочки", e.message)
+      alert("сообщение ошибочки", e.message)
     } finally {
 
     }
@@ -62,7 +62,7 @@ export const housingStockActions = {
       dispatch(housingStockActions.addClient({client, addressId}))
     } catch (e) {
       console.log("Ошибочка бинда",e);
-      console.log("сообщение ошибочки бинда", e.message)
+      alert("сообщение ошибочки бинда", e.message)
     } finally {
     }
   },
@@ -74,7 +74,7 @@ export const housingStockActions = {
       dispatch(housingStockActions.deletingClient({addressId ,clientId}))
     } catch (e) {
       console.log("Ошибочка удаления",e);
-      console.log("сообщение ошибочки удаления", e.message)
+      alert("сообщение ошибочки удаления", e.message)
     } finally {
 
     }
