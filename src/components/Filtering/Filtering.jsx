@@ -93,12 +93,6 @@ const Filtering = () => {
             </Option>
           ))}
         </Select>
-        <button onClick={() => handleClick()}>
-          FASFASF
-        </button>
-        <button onClick={() => handleSearch()}>
-          CLIENTS
-        </button>
       </div>
       {/*<div>*/}
       {/*  <Select*/}
