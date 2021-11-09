@@ -9,14 +9,12 @@ export const addressActions = {
   setError: (payload) => ({type: SET_ERROR, payload}),
   fetchStreets: () => async (dispatch) => {
     try {
-      dispatch(addressActions.setIsLoading(true))
       const response = await addressService.getStreetsList();
       const mockStreetsList = response.data.filter((street) => street.cityId === 1);
       dispatch(addressActions.setStreetsList(mockStreetsList));
     } catch (e) {
       dispatch(addressActions.setError("Произошла ошибка"))
     } finally {
-      dispatch(addressActions.setIsLoading(false))
     }
   },
   fetchHouses: (streetId) => async (dispatch) => {

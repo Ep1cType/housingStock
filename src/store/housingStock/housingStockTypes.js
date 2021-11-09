@@ -1,9 +1,10 @@
-export const SET_HOUSING_STOCK = 'SET_HOUSING_STOCK';
-export const SET_CLIENTS_LIST = 'SET_CLIENTS_LIST';
-export const SET_IS_LOADING = 'SET_IS_LOADING';
-export const ADD_NEW_CLIENT = 'ADD_NEW_CLIENT';
-export const DELETE_CLIENT = 'DELETE_CLIENT';
-export const EDIT_CLIENT = 'EDIT_CLIENT';
-export const SET_TOTAL_COUNT = 'SET_TOTAL_COUNT';
-export const SET_PER_PAGE = 'SET_PER_PAGE';
+export const SET_HOUSING_STOCK = "SET_HOUSING_STOCK";
+export const SET_CLIENTS_LIST = "SET_CLIENTS_LIST";
+export const SET_IS_LOADING = "SET_IS_LOADING";
+export const SET_IS_ERROR = "SET_IS_ERROR";
+export const ADD_NEW_CLIENT = "ADD_NEW_CLIENT";
+export const DELETE_CLIENT = "DELETE_CLIENT";
+export const EDIT_CLIENT = "EDIT_CLIENT";
+export const SET_TOTAL_COUNT = "SET_TOTAL_COUNT";
+export const SET_PER_PAGE = "SET_PER_PAGE";
 

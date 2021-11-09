@@ -3,7 +3,7 @@ import {
   DELETE_CLIENT,
   EDIT_CLIENT,
   SET_CLIENTS_LIST,
-  SET_HOUSING_STOCK,
+  SET_HOUSING_STOCK, SET_IS_ERROR,
   SET_IS_LOADING, SET_PER_PAGE, SET_TOTAL_COUNT
 } from "./housingStockTypes";
 
@@ -11,7 +11,7 @@ let initialState = {
   housingStock: [],
   clientsList: [],
   isLoading: false,
-  error: "",
+  isError: "",
   perPage: 10,
   totalCount: 0,
 };
@@ -74,6 +74,12 @@ const housingStockReducer = (state = initialState, action) => {
       return {
         ...state,
         perPage: action.payload
+      };
+    }
+    case SET_IS_ERROR: {
+      return {
+        ...state,
+        isError: action.payload
       };
     }
     default:
